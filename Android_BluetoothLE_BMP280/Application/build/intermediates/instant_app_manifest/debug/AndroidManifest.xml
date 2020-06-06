@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright 2019 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.solievp.bmp280.bluetoothle"
+    android:targetSandboxVersion="2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="28" />
+
+    <!--
+    min/target обозначающее минимальный уровень API, необходимый для запуска приложения
+    и SDK versions (<uses-sdk>) контролируется build.gradle
+    -->
+
+
+    <!--
+    Для включения устройств поддерживающих только технологию BLE
+    вы должны включить в список функций данную команду
+    PackageManager.hasSystemFeature(FEATURE_BLUETOOTH_LE)
+    -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- разрешение на использование сервисов Bluetooth -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- Bluetooth от имени администратора -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Разрешение на использование геоданных -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Разрешение на использование маяков(Wi-Fi, GPS, Network) -->
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light" > <!-- Иконка и тема приложения -->
+        <activity
+            android:name="com.solievp.bmp280.bluetoothle.DeviceScanActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" /> <!-- Запуск главной функции -->
+            </intent-filter>
+        </activity>
+        <activity android:name="com.solievp.bmp280.bluetoothle.DeviceControlActivity" /> <!-- Местоположение запуска Java файла -->
+        <service
+            android:name="com.solievp.bmp280.bluetoothle.BluetoothLeService"
+            android:enabled="true" /> <!-- Включение сервиса Java -->
+    </application>
+
+</manifest>

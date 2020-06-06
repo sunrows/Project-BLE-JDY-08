@@ -1,0 +1,108 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 Copyright 2019 The Android Open Source Project
+4
+5 Licensed under the Apache License, Version 2.0 (the "License");
+6 you may not use this file except in compliance with the License.
+7 You may obtain a copy of the License at
+8
+9     http://www.apache.org/licenses/LICENSE-2.0
+10
+11 Unless required by applicable law or agreed to in writing, software
+12 distributed under the License is distributed on an "AS IS" BASIS,
+13 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14 See the License for the specific language governing permissions and
+15 limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.solievp.bmp280.bluetoothle"
+19    android:versionCode="1"
+20    android:versionName="1.0" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="18"
+23-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml
+24        android:targetSdkVersion="28" />
+24-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml
+25
+26    <!--
+27    min/target обозначающее минимальный уровень API, необходимый для запуска приложения
+28    и SDK versions (<uses-sdk>) контролируется build.gradle
+29    -->
+30
+31
+32    <!--
+33    Для включения устройств поддерживающих только технологию BLE
+34    вы должны включить в список функций данную команду
+35    PackageManager.hasSystemFeature(FEATURE_BLUETOOTH_LE)
+36    -->
+37    <uses-feature
+37-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:29:5-89
+38        android:name="android.hardware.bluetooth_le"
+38-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:29:19-63
+39        android:required="true" />
+39-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:29:64-87
+40
+41    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- разрешение на использование сервисов Bluetooth -->
+41-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:31:5-67
+41-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:31:22-65
+42    <uses-permission android:name="android.permission.BLUETOOTH" />
+42-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:31:5-67
+42-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:31:22-65
+43    <uses-permission android:name="android.permission.BLUETOOTH" />
+43-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:31:5-67
+43-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:31:22-65
+44    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- Bluetooth от имени администратора -->
+44-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:34:5-73
+44-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:34:22-71
+45    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Разрешение на использование геоданных -->
+45-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:35:5-81
+45-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:35:22-78
+46    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Разрешение на использование маяков(Wi-Fi, GPS, Network) -->
+46-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:36:5-79
+46-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:36:22-76
+47
+48    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+48-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:34:5-73
+48-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:34:22-71
+49
+50    <application
+50-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:39:5-51:19
+51        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+51-->[com.android.support:support-compat:28.0.0] C:\Users\sunny\.gradle\caches\transforms-2\files-2.1\f1491a81a65d4033a56d6549564e765e\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+52        android:debuggable="true"
+53        android:icon="@drawable/ic_launcher"
+53-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:40:9-45
+54        android:label="@string/app_name"
+54-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:39:18-50
+55        android:theme="@android:style/Theme.Holo.Light" > <!-- Иконка и тема приложения -->
+55-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:41:9-56
+56        <activity
+56-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:42:9-48:20
+57            android:name="com.solievp.bmp280.bluetoothle.DeviceScanActivity"
+57-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:42:19-83
+58            android:label="@string/app_name" >
+58-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:43:13-45
+59            <intent-filter>
+59-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:44:13-47:29
+60                <action android:name="android.intent.action.MAIN" />
+60-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:45:17-68
+60-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:45:25-66
+61
+62                <category android:name="android.intent.category.LAUNCHER" /> <!-- Запуск главной функции -->
+62-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:46:17-76
+62-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:46:27-74
+63            </intent-filter>
+64        </activity>
+65        <activity android:name="com.solievp.bmp280.bluetoothle.DeviceControlActivity" /> <!-- Местоположение запуска Java файла -->
+65-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:49:9-88
+65-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:49:19-86
+66        <service
+66-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:50:9-107
+67            android:name="com.solievp.bmp280.bluetoothle.BluetoothLeService"
+67-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:50:18-82
+68            android:enabled="true" /> <!-- Включение сервиса Java -->
+68-->D:\Bluetooth LE BMP280\Android_BluetoothLE_BMP280\Application\src\main\AndroidManifest.xml:50:83-105
+69    </application>
+70
+71</manifest>

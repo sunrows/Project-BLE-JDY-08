@@ -1,0 +1,4 @@
+#Sun May 31 22:17:38 MSK 2020
+base.0=D\:\\Bluetooth LE BMP280\\Android_BluetoothLE_BMP280\\Application\\build\\intermediates\\dex\\debug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
